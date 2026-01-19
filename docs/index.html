@@ -27,11 +27,11 @@
             <div class="header-right">
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="#about">Sobre</a></li> <!-- TODO: Keep it selected while page is in the correct section -->
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projetos</a></li>
-                        <li><a href="#experiences">Experiências</a></li>
-                        <li><a href="#references">Referências</a></li>
+                        <li><a class="header-item" target-section="about" href="#about">Sobre</a></li>
+                        <li><a class="header-item" target-section="skills" href="#skills">Skills</a></li>
+                        <li><a class="header-item" target-section="projects" href="#projects">Projetos</a></li>
+                        <li><a class="header-item" target-section="experiences" href="#experiences">Experiências</a></li>
+                        <li><a class="header-item" target-section="references" href="#references">Referências</a></li>
                         <li class="has-dropdown"><a href="#footer">Contato</a>
                             <ul class="dropdown-menu">
                                 <li><a href="https://www.linkedin.com/in/leonardoabezerra" target="_blank" rel="noopener noreferrer" class="linkedin-icon">
@@ -293,12 +293,38 @@
 
     <script>
 
+    // ----- HEADER SCRIPTS -----
+    const sections = document.querySelectorAll('section');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {            
+            if (entry.isIntersecting) {
+                document.querySelectorAll('.header-item').forEach(item => {
+                    item.classList.remove('in-view');
+
+                    let section_id = entry.target.id;
+
+                    const header_item = document.querySelector(`[target-section="${section_id}"]`);
+                    if (header_item) {
+                        header_item.classList.add('in-view');
+                    }
+                })
+
+                
+            }
+        })
+    }, {
+        threshold: 0.8
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+
     // ----- PROJECT CARDS SCRIPTS -----
     const project_cards = document.querySelectorAll('.project-card');
 
     project_cards.forEach(card => {
         card.addEventListener('mouseenter', function () {
-            var content = this.nextElementSibling;
+            let content = this.nextElementSibling;
 
             content.style.maxHeight = content.scrollHeight + "px";
             card.classList.add('is-active');
@@ -318,7 +344,7 @@
 
     project_cards.forEach(card => {
         card.addEventListener('mouseleave', function () {
-            var content = this.nextElementSibling;
+            let content = this.nextElementSibling;
             
             content.style.maxHeight = null;
             card.classList.remove('is-active');
