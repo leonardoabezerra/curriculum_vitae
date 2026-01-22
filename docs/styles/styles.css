@@ -322,6 +322,8 @@ a.in-view {
     background-image: url('../assets/pfp.jpg');
     background-size: cover;
     background-position: center;
+
+    transform: scaleX(-1)
 }
 
 
@@ -347,16 +349,20 @@ a.in-view {
 .banner-section {
     width: 100%;
     height: 500px;        
-    background-image: url('../assets/banner.png');
+    background-image: url('../assets/Banner-expanded.png');
 
-    background-size: cover;
-    background-position: center;
+    background-size: 190%;
+    background-position: 80% 45%;
+    background-repeat: no-repeat;
     justify-content: center;
     max-width: none !important;
 }
 
 .banner-details {
+    width: 100%;
     max-width: 960px;
+    margin: 0 auto; 
+    padding: 1rem 1.5rem;
 }
 
 
