@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="%23346288"/></svg>'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/styles.css'>
-    <!-- <script src='scripts/scripts.js'></script> -->
+    <script src="./scripts/script.js" defer></script>
 </head>
 <body>
     <div class="cv-container">
@@ -205,6 +205,8 @@
                 <h2>Experiências</h2>
 
                 <ol class="timeline">
+                    <div class="timeline-line"></div>
+
                     <li class="timeline-item"><a href="https://grupontsec.com.br/pt/" target="_blank" rel="noopener noreferrer">
                         <div class="timeline-dot"></div>
                         <time class="timeline-date">set 2025 - hoje</time>
@@ -290,157 +292,6 @@
         </footer>
 
     </div>    
-
-    <script>
-
-    // ----- HEADER SCRIPTS -----
-    const sections = document.querySelectorAll('section');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {            
-            if (entry.isIntersecting) {
-                document.querySelectorAll('.header-item').forEach(item => {
-                    item.classList.remove('in-view');
-
-                    let section_id = entry.target.id;
-
-                    const header_item = document.querySelector(`[target-section="${section_id}"]`);
-                    if (header_item) {
-                        header_item.classList.add('in-view');
-                    }
-                })
-
-                
-            }
-        })
-    }, {
-        threshold: 0.8
-    });
-
-    sections.forEach(sec => observer.observe(sec));
-
-    // ----- PROJECT CARDS SCRIPTS -----
-    const project_cards = document.querySelectorAll('.project-card');
-
-    project_cards.forEach(card => {
-        card.addEventListener('mouseenter', function () {
-            let content = this.nextElementSibling;
-
-            content.style.maxHeight = content.scrollHeight + "px";
-            card.classList.add('is-active');
-            card.classList.remove('not-selected');
-
-            project_cards.forEach(othercards => {
-                if (othercards !== card) {
-                    let otherContent = othercards.nextElementSibling;
-                    otherContent.style.maxHeight = null;
-
-                    othercards.classList.remove('is-active');
-                    othercards.classList.add('not-selected');
-                }
-            });
-        });
-    });
-
-    project_cards.forEach(card => {
-        card.addEventListener('mouseleave', function () {
-            let content = this.nextElementSibling;
-            
-            content.style.maxHeight = null;
-            card.classList.remove('is-active');
-
-            const activeCard = Array.from(project_cards).find(c => c.classList.contains('is-active'))
-
-            if (activeCard) {
-                activeCard.classList.remove('not-selected');
-                project_cards.forEach(c => {
-                    if (c !== activeCard) {
-                        c.classList.add('not-selected')
-                    }
-                });               
-            } else {
-                project_cards.forEach(c => {
-                    c.classList.remove('not-selected');
-                });
-            }
-
-        });
-    });
-
-
-    // ----- PROJECT CARD COLLAPSIBLE SCRIPTS ----
-    /*
-    project_cards.forEach(card => {
-        card.addEventListener('click', function () {
-            
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                card.classList.remove('is-active');
-                       
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                card.classList.add('is-active');
-                card.classList.remove('not-selected');
-                project_cards.forEach(othercards => {
-                    if (othercards !== card) {
-                        let otherContent = othercards.nextElementSibling;
-                        otherContent.style.maxHeight = null;
-                        
-                        
-                        othercards.classList.remove('is-active');
-                        othercards.classList.add('not-selected');
-                    }
-                })
-            }
-        });
-    });
-    */
-
-
-    // ----- TIMELINE SCRIPTS -----
-    const timeline_item = document.querySelectorAll('.timeline-item');
-
-    timeline_item.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            timeline_item.forEach(otheritems => {
-                if (otheritems !== item) {
-                    otheritems.classList.add('not-selected');
-                }
-            });
-        });
-    });
-
-    timeline_item.forEach(item => {
-        item.addEventListener('mouseleave', () => {
-            timeline_item.forEach(otheritem => {
-                if (otheritem !== item) {
-                    otheritem.classList.remove('not-selected');
-                }
-            });
-        });
-    });
-
-    // ----- COPY ICON -----
-
-    async function copyAnimation(icon) {
-        icon.classList.add('copied');
-
-        let text_to_copy = icon.previousElementSibling.textContent;
-
-        try {
-            await navigator.clipboard.writeText(text_to_copy);
-        } catch (err) {
-            console.error("Failed to copy text to clipboard: ", error);
-            alert("Falha ao copiar texto.");
-        }
-
-        setTimeout(() => {
-            icon.classList.remove('copied');
-        }, 2000);
-    }
-
-    </script>
 </body>
 </html>
 
