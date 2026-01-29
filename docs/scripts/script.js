@@ -10,7 +10,7 @@ const sections = document.querySelectorAll('section');
 
                     let section_id = entry.target.id;
 
-                    const header_item = document.querySelector(`[target-section="${section_id}"]`);
+                    const header_item = document.querySelector(`[target-section="${section_id}"]`) || document.querySelector(`[target-section2="${section_id}"]`);
                     if (header_item) {
                         header_item.classList.add('in-view');
                     }
@@ -27,6 +27,10 @@ const sections = document.querySelectorAll('section');
 
     // ----- PROJECT CARDS SCRIPTS -----
     const project_cards = document.querySelectorAll('.project-card');
+
+    function openURL(url) {
+        window.open(url, "_blank");
+    }
 
     project_cards.forEach(card => {
         card.addEventListener('mouseenter', function () {
