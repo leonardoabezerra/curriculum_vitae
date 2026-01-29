@@ -27,7 +27,7 @@
             <div class="header-right">
                 <nav class="main-nav">
                     <ul>
-                        <li><a class="header-item" target-section="about" href="#about">Sobre</a></li>
+                        <li><a class="header-item" target-section="about" target-section2="competencies" href="#about">Sobre</a></li>
                         <li><a class="header-item" target-section="skills" href="#skills">Skills</a></li>
                         <li><a class="header-item" target-section="projects" href="#projects">Projetos</a></li>
                         <li><a class="header-item" target-section="experiences" href="#experiences">Experiências</a></li>
@@ -72,16 +72,6 @@
 
         <main class="main-content">
 
-<!--
-    <section id="profile" class="profile-section">
-        <div class="profile-picture-main"></div>
-        <div class="profile-picture-details">
-            <h1 class="profile-name">Leonardo Bezerra</h1>
-            <p class="profile-graduation">Engenharia de Software</p>
-            <p class="profile-university">Universidade de Brasília (UnB), DF</p>
-        </div>
-    </section>
--->
     
             <section id="about" class="biography-section">
                 <p>Sou um estudante de Engenharia de Software na Universidade de Brasília (UnB), atualmente cursando o sétimo semestre. Sempre tive interesse por programação e tenho desenvolvido essa habilidade desde o ensino médio. Tenho maior interesse no desenvolvimento backend, apesar de já ter explorado outras áreas do desenvolvimento de software.
@@ -110,6 +100,7 @@
 
                 <h3 class="skill-h3">Hard Skills</h3>  <!-- TODO: button to organize skills by category -->
                 <div class="skills-container">
+                    <span class="skill-tag">Inglês Fluente</span>
                     <span class="skill-tag">Python</span>
                     <span class="skill-tag">JavaScript</span>
                     <span class="skill-tag">TypeScript</span>
@@ -133,51 +124,35 @@
                     <span class="skill-tag">Varonis</span>
                 </div>
             </section>
+            
 
             <section id="projects">
                 <h2>Projetos</h2>
-
-                <article id="project1-card" class="project-card" data-target-modal="project1-modal">
-                    <div class="project-info">
-                        <h3 class="project-title">SideChef</h3>
-                        <p class="project-description">SideChef é um projeto desenvolvido na disciplina de Métodos de Desenvolvimento de Software. Consiste em um aplicativo mobile de receitas focado em seu diferencial, a leitura de ingredientes por OCR (Optical Character Recognition).</p>
-                        <br>
-                        <p class="project-read-more">Ler mais</p>
-                    </div>
-                    <div class="project-image"></div>
-                </article>
-                <article class="project-card-collapsible-content">
-                    <p class="project-card-collapsible-description"><br>O objetivo é um aplicativo que possa ajudar o usuário a cozinhar diversas receitas baseadas nos ingredientes que ele possui à disposição em casa.
-                        <br><br>O usuário pode tirar uma foto dos ingredientes que possui em casa, que serão identificados pelo OCR e utilizados para filtrar receitas que podem ser feitas com aqueles ingredientes.
-                        <br><br>O desenvolvimento do aplicativo ocorreu durante o semestre por uma equipe de 13 estudantes.
-                    </p>
-                    <h4 class="project-card-collapsible-contribution">Minha Contribuição</h3>
-                    <ul class="project-card-collapsible-contribution-list">
-                        <li class="project-card-collapsible-contribution-list-item">Fui exclusivamente responsável pela implementação do OCR e pela integração do mesmo com ambos backend e frontend.</li>
-                    </ul>
-                </article>
-
-                <article id="project2-card" class="project-card">
+                
+                <article id="project1-card" class="project-card" onclick="openURL(`https://github.com/leonardoabezerra/Sheo`)">
                     <div class="project-info">
                         <h3 class="project-title">Sheo (Shell)</h3>
-                        <p class="project-description">SideChef é um projeto desenvolvido na disciplina de Métodos de Desenvolvimento de Software. Consiste em um aplicativo mobile de receitas focado em seu diferencial, a leitura de ingredientes por OCR (Optical Character Recognition). </p>
+                        <p class="project-description">Sheo é uma <b>interface de linha de comando (CLI)</b> customizada desenvolvida em Python que replica funcionalidades fundamentais de shells Unix. Esse projeto demonstra conceitos de programação de sistemas de baixo nível, incluindo <b>gerenciamento de processos, manipulação de descritores de arquivo e comunicação inter-processos (IPC)</b>.</p>
                         <br>
                         <p class="project-read-more">Ler mais</p>
                     </div>
                     <div class="project-image"></div>
-                </article>
+                </article></a>
                 <article class="project-card-collapsible-content">
-                    <p class="project-card-collapsible-description"><br>O objetivo é um aplicativo que possa ajudar o usuário a cozinhar diversas receitas baseadas nos ingredientes que ele possui à disposição em casa.
-                        <br><br>O usuário pode tirar uma foto dos ingredientes que possui em casa, que serão identificados pelo OCR e utilizados para filtrar receitas que podem ser feitas com aqueles ingredientes.
-                        <br><br>O desenvolvimento do aplicativo ocorreu durante o semestre por uma equipe de 13 estudantes.
+                    <p class="project-card-collapsible-text"><br>Iniciei este projeto com o objetivo de compreender melhor o funcionamento por trás de interfaces de linha de comando como o Bash, enquanto pratico desenvolvimento em Python.
                     </p>
-                    <h4 class="project-card-collapsible-contribution">Minha Contribuição</h3>
-                    <ul class="project-card-collapsible-contribution-list">
-                        <li class="project-card-collapsible-contribution-list-item">Fui exclusivamente responsável pela implementação do OCR e pela integração do mesmo com ambos backend e frontend.</li>
+                    <h4 class="project-card-collapsible-title">Principais Funcionalidades</h3>
+                    <ul class="project-card-collapsible-list">
+                        <li class="project-card-collapsible-list-item"><b>Execução de comandos & Ciclo de vida:</b> REPL (Read-Eval-Print Loop) completo implementado enquanto gerencia subprocessos para executar comandos externos.</li>
+                        <li class="project-card-collapsible-list-item"><b>Pipelines Avançadas & Redirecionamento:</b> Suporta encadeamento de comandos e redirecionamento de saída.</li>
+                        <li class="project-card-collapsible-list-item"><b>Preenchimento automático dinâmico & Histórico:</b> Suporta preenchimento automático de comandos internos e externos assim como a navegação e gerenciamento do histórico de comandos.</li>
+                        <li class="project-card-collapsible-list-item"><b>Comandos Internos:</b> Implementação customizada de comandos essenciais so shell.</li>
+                        <li class="project-card-collapsible-list-item"><b>Parsing Robusto:</b> Garante a interpretação correta de aspas, barras invertidas e argumentos complexos.</li>
                     </ul>
+                    <p class="project-card-collapsible-text">Sinta-se à vontade para explorar o repositório do <b>Sheo</b> no <b>GitHub</b> para mais detalhes!</p>
                 </article>
 
-                 <article id="project3-card" class="project-card">
+                <article id="project2-card" class="project-card" onclick="openURL(`https://github.com/fga-eps-mds/2025.1-SideChef-RecipeService`)">
                     <div class="project-info">
                         <h3 class="project-title">SideChef</h3>
                         <p class="project-description">SideChef é um projeto desenvolvido na disciplina de Métodos de Desenvolvimento de Software. Consiste em um aplicativo mobile de receitas focado em seu diferencial, a leitura de ingredientes por OCR (Optical Character Recognition).</p>
@@ -187,16 +162,15 @@
                     <div class="project-image"></div>
                 </article>
                 <article class="project-card-collapsible-content">
-                    <p class="project-card-collapsible-description"><br>O objetivo é um aplicativo que possa ajudar o usuário a cozinhar diversas receitas baseadas nos ingredientes que ele possui à disposição em casa.
+                    <p class="project-card-collapsible-text"><br>O objetivo é um aplicativo que possa ajudar o usuário a cozinhar diversas receitas baseadas nos ingredientes que ele possui à disposição em casa.
                         <br><br>O usuário pode tirar uma foto dos ingredientes que possui em casa, que serão identificados pelo OCR e utilizados para filtrar receitas que podem ser feitas com aqueles ingredientes.
                         <br><br>O desenvolvimento do aplicativo ocorreu durante o semestre por uma equipe de 13 estudantes.
                     </p>
-                    <h4 class="project-card-collapsible-contribution">Minha Contribuição</h3>
-                    <ul class="project-card-collapsible-contribution-list">
-                        <li class="project-card-collapsible-contribution-list-item">Fui exclusivamente responsável pela implementação do OCR e pela integração do mesmo com ambos backend e frontend.</li>
+                    <h4 class="project-card-collapsible-title">Minha Contribuição</h3>
+                    <ul class="project-card-collapsible-list">
+                        <li class="project-card-collapsible-list-item">Fui exclusivamente responsável pela implementação do OCR e pela integração do mesmo com ambos backend e frontend.</li>
                     </ul>
                 </article>
-
                 
             </section>
 

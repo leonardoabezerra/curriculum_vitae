@@ -13,6 +13,8 @@
 
     --hyperlink-color: #4381b4;
     --hyperlink-hover: #346288;
+
+    --timeline-line-color: #346288;
   
     /* -- fonts -- */
     --primary-font: 'Inter', 'Raleway', sans-serif;
@@ -96,8 +98,8 @@ h3 {
 
 h4 {
     font-size: 16px;
-    font-weight: 300;
-    letter-spacing: -0.015em;
+    font-weight: 355;
+    letter-spacing: -0.045em;
     padding-top: 0.5rem;
     padding-bottom: 0.25rem;
 }
@@ -499,8 +501,14 @@ a.in-view {
 
 /* -- Project images -- */
 #project1-card .project-image {
+    background-image: url('../assets/Sheo_.png');
+    background-size: contain;
+}
+
+#project2-card .project-image {
     background-image: url('../assets/SideChef.png');
 }
+
 
 
 /* ----- END PROJECTS SECTION ----- */
@@ -520,14 +528,14 @@ a.in-view {
 
 }
 
-.project-card-collapsible-description {
+.project-card-collapsible-text {
     padding-bottom: 1.5rem;
     font-size: 15px;
     font-weight: 400;
     color: var(--secondary-text-color);
 }
 
-.project-card-collapsible-contribution-list {
+.project-card-collapsible-list {
     padding-left: 1rem;
     padding-bottom: 1rem;
     font-size: 15px;
@@ -535,7 +543,7 @@ a.in-view {
     color: var(--secondary-text-color);
 }
 
-.project-card-collapsible-contribution-list-item {
+.project-card-collapsible-list-item {
     padding-bottom: 4px;
 }
 
@@ -570,7 +578,7 @@ a.in-view {
 }
 
 .timeline-item:hover svg {
-    transform: translateY(1px);
+    transform: translateY(-2px);
 }
 
 .timeline-item:last-child {
@@ -585,7 +593,7 @@ a.in-view {
     width: 2px;
     height: 0;
     opacity: 1;
-    background-color: var(--hyperlink-hover);
+    background-color: var(--timeline-line-color);
     z-index: 1;
     transition: height 0.1s linear, opacity 0.4s ease;
 }
@@ -618,7 +626,7 @@ a.in-view {
 }
 
 .timeline-item svg {
-    transform: translateY(8px);
+    transform: translateY(4px);
     height: 24px;
     width: 24px;
     fill: var(--primary-text-color);
