@@ -5,8 +5,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Leonardo Bezerra</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="%23346288"/></svg>'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/styles.css'>
-    <!-- <script src='scripts/scripts.js'></script> -->
+    <script src="./scripts/script.js" defer></script>
 </head>
 <body>
     <div class="cv-container">
@@ -19,21 +20,23 @@
                     </g>
                     <defs><clipPath id="clip0_6_330"><rect width="48" height="48" fill="white"></rect></clipPath></defs>
                 </svg>
-                <h2 class="logo-title">Leonardo Bezerra</h2>
+                <a href="#">
+                    <h2 class="logo-title">Leonardo Bezerra</h2>
+                </a>
             </div>
             <div class="header-right">
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projetos</a></li>
-                        <li><a href="#experiences">Experiências</a></li>
-                        <li><a href="#references">Referências</a></li>
+                        <li><a class="header-item" target-section="about" target-section2="competencies" href="#about">Sobre</a></li>
+                        <li><a class="header-item" target-section="skills" href="#skills">Skills</a></li>
+                        <li><a class="header-item" target-section="projects" href="#projects">Projetos</a></li>
+                        <li><a class="header-item" target-section="experiences" href="#experiences">Experiências</a></li>
+                        <li><a class="header-item" target-section="references" href="#references">Referências</a></li>
                         <li class="has-dropdown"><a href="#footer">Contato</a>
                             <ul class="dropdown-menu">
                                 <li><a href="https://www.linkedin.com/in/leonardoabezerra" target="_blank" rel="noopener noreferrer" class="linkedin-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
-                                    <span>Linked-In</span>
+                                    <span>LinkedIn</span>
                                 </a></li>
                                 <li><a href="https://github.com/leonardoabezerra" target="_blank" rel="noopener noreferrer" class="github-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="none" viewBox="0 0 256 256"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path></svg>
@@ -41,35 +44,37 @@
                                 </a></li>
                                 <li><a href="https://wa.me/5561982650328?text=Olá,%20acabei%20de%20explorar%20seu%20portfólio!" target="_blank" rel="noopener noreferrer" class="whatsapp-icon">
                                     <svg width="18px" height="18px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.096"></g><g id="SVGRepo_iconCarrier"> <path d="M17.6 6.31999C16.8669 5.58141 15.9943 4.99596 15.033 4.59767C14.0716 4.19938 13.0406 3.99622 12 3.99999C10.6089 4.00135 9.24248 4.36819 8.03771 5.06377C6.83294 5.75935 5.83208 6.75926 5.13534 7.96335C4.4386 9.16745 4.07046 10.5335 4.06776 11.9246C4.06507 13.3158 4.42793 14.6832 5.12 15.89L4 20L8.2 18.9C9.35975 19.5452 10.6629 19.8891 11.99 19.9C14.0997 19.9001 16.124 19.0668 17.6222 17.5816C19.1205 16.0965 19.9715 14.0796 19.99 11.97C19.983 10.9173 19.7682 9.87634 19.3581 8.9068C18.948 7.93725 18.3505 7.05819 17.6 6.31999ZM12 18.53C10.8177 18.5308 9.65701 18.213 8.64 17.61L8.4 17.46L5.91 18.12L6.57 15.69L6.41 15.44C5.55925 14.0667 5.24174 12.429 5.51762 10.8372C5.7935 9.24545 6.64361 7.81015 7.9069 6.80322C9.1702 5.79628 10.7589 5.28765 12.3721 5.37368C13.9853 5.4597 15.511 6.13441 16.66 7.26999C17.916 8.49818 18.635 10.1735 18.66 11.93C18.6442 13.6859 17.9355 15.3645 16.6882 16.6006C15.441 17.8366 13.756 18.5301 12 18.53ZM15.61 13.59C15.41 13.49 14.44 13.01 14.26 12.95C14.08 12.89 13.94 12.85 13.81 13.05C13.6144 13.3181 13.404 13.5751 13.18 13.82C13.07 13.96 12.95 13.97 12.75 13.82C11.6097 13.3694 10.6597 12.5394 10.06 11.47C9.85 11.12 10.26 11.14 10.64 10.39C10.6681 10.3359 10.6827 10.2759 10.6827 10.215C10.6827 10.1541 10.6681 10.0941 10.64 10.04C10.64 9.93999 10.19 8.95999 10.03 8.56999C9.87 8.17999 9.71 8.23999 9.58 8.22999H9.19C9.08895 8.23154 8.9894 8.25465 8.898 8.29776C8.8066 8.34087 8.72546 8.403 8.66 8.47999C8.43562 8.69817 8.26061 8.96191 8.14676 9.25343C8.03291 9.54495 7.98287 9.85749 8 10.17C8.0627 10.9181 8.34443 11.6311 8.81 12.22C9.6622 13.4958 10.8301 14.5293 12.2 15.22C12.9185 15.6394 13.7535 15.8148 14.58 15.72C14.8552 15.6654 15.1159 15.5535 15.345 15.3915C15.5742 15.2296 15.7667 15.0212 15.91 14.78C16.0428 14.4856 16.0846 14.1583 16.03 13.84C15.94 13.74 15.81 13.69 15.61 13.59Z" fill="#9dadbe"></path> </g></svg>
-                                    <span>Whatsapp</span>
+                                    <span>WhatsApp</span>
                                 </a></li>
                                 <li><a href="mailto:leonardoalvesbezerra@gmail.com" target="_blank" rel="noopener noreferrer" class="email-icon">
                                     <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="#9dadbe"></path> </g></svg>
-                                    <span>Email</span>
+                                    <span>E-mail</span>
                                 </a></li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
-                <a href="#">
-                    <div class="profile-picture-header"></div>
-                </a>
+                
             </div>
         </header>
     
-        <main class="main-content">
-
-            <section id="profile" class="profile-section">
-                <div class="profile-picture-main"></div>
-                <div class="profile-picture-details">
-                    <p class="profile-name">Leonardo Bezerra</p>
+        
+            <section id="banner" class="banner-section">
+                <div class="banner-details">
+                    <div class="profile-picture-main"></div>
+                    <br>
+                    <h1 class="profile-name">Leonardo Bezerra</h1>
                     <p class="profile-graduation">Engenharia de Software</p>
-                    <p class="profile-university">Universidade de Brasília (UnB)</p>
+                    <p class="profile-university">Universidade de Brasília (UnB), DF</p>
                 </div>
+                        
             </section>
 
+        <main class="main-content">
+
+    
             <section id="about" class="biography-section">
-                <p>Sou um estudante de Engenharia de Software na Universidade de Brasília (UnB), atualmente cursando o sexto semestre. Sempre tive interesse por programação e tenho desenvolvido essa habilidade desde o ensino médio. Tenho maior interesse no desenvolvimento backend, apesar de já ter explorado outras áreas do desenvolvimento de software.
+                <p>Sou um estudante de Engenharia de Software na Universidade de Brasília (UnB), atualmente cursando o sétimo semestre. Sempre tive interesse por programação e tenho desenvolvido essa habilidade desde o ensino médio. Tenho maior interesse no desenvolvimento backend, apesar de já ter explorado outras áreas do desenvolvimento de software.
                     <br><br>Um dos meus principais projetos foi desenvolvido na disciplina de Métodos de Desenvolvimento de Software e consiste em um aplicativo mobile de receitas com identificação de ingredientes por OCR (Optical Character Recognition).
                     <br><br>Sinta-se livre para explorar meu portfólio! Verifique também meu <a href="https://www.linkedin.com/in/leonardoabezerra" target="_blank" rel="noopener noreferrer">LinkedIn</a> e <a href="https://github.com/leonardoabezerra" target="_blank" rel="noopener noreferrer">GitHub</a>!
                 </p>
@@ -83,65 +88,90 @@
             <section id="skills">
                 <h2>Skills</h2>
 
-                <h3>Soft Skills</h3>    
+                <h3 class="skill-h3">Soft Skills</h3>    
                 <div class="skills-container">
-                    <span class="skill-tag soft-tag">Comunicação</span>
-                    <span class="skill-tag soft-tag">Trabalho em Equipe</span>
-                    <span class="skill-tag soft-tag">Inteligência Emocional</span>
+                    <span class="skill-tag soft-tag">Aprendizado Rápido</span>
                     <span class="skill-tag soft-tag">Capacidade de Organização</span>
                     <span class="skill-tag soft-tag">Comprometimento</span>
-                    <span class="skill-tag soft-tag">Aprendizado Rápido</span>
+                    <span class="skill-tag soft-tag">Comunicação</span>
+                    <span class="skill-tag soft-tag">Inteligência Emocional</span>
+                    <span class="skill-tag soft-tag">Trabalho em Equipe</span>
                 </div>
 
-                <h3>Hard Skills</h3>
+                <h3 class="skill-h3">Hard Skills</h3>  <!-- TODO: button to organize skills by category -->
                 <div class="skills-container">
+                    <span class="skill-tag">Inglês Fluente</span>
                     <span class="skill-tag">Python</span>
                     <span class="skill-tag">JavaScript</span>
                     <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">AppScript</span>
                     <span class="skill-tag">C</span>
                     <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">Sequelize.js</span>
+                    <span class="skill-tag">AppScript</span>
+                    <span class="skill-tag">MongoDB</span>
                     <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">React Native</span>
+                    <span class="skill-tag">MySQL</span>
                     <span class="skill-tag">Docker</span>
                     <span class="skill-tag">Git/GitHub</span>
                     <span class="skill-tag">Pytest</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">FastAPI</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Sequelize.js</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">React Native</span>
                     <span class="skill-tag">Noções de Redes</span>
                     <span class="skill-tag">Noções de Ciberseguraça</span>
                     <span class="skill-tag">Varonis</span>
                 </div>
             </section>
+            
 
             <section id="projects">
                 <h2>Projetos</h2>
-
-                <article id="project1-card" class="project-card" data-target-modal="project1-modal">
+                
+                <article id="project1-card" class="project-card" onclick="openURL(`https://github.com/leonardoabezerra/Sheo`)">
                     <div class="project-info">
-                        <p class="project-title">SideChef</p>
-                        <p class="project-description">SideChef é um projeto desenvolvido na disciplina de Métodos de Desenvolvimento de Software. Consiste em um aplicativo mobile de receitas focado em seu diferencial, a leitura de ingredientes por OCR (Optical Recognition Character).</p>
-                        <br></br>
+                        <h3 class="project-title">Sheo (Shell)</h3>
+                        <p class="project-description">Sheo é uma <b>interface de linha de comando (CLI)</b> customizada desenvolvida em Python que replica funcionalidades fundamentais de shells Unix. Esse projeto demonstra conceitos de programação de sistemas de baixo nível, incluindo <b>gerenciamento de processos, manipulação de descritores de arquivo e comunicação inter-processos (IPC)</b>.</p>
+                        <br>
+                        <p class="project-read-more">Ler mais</p>
+                    </div>
+                    <div class="project-image"></div>
+                </article></a>
+                <article class="project-card-collapsible-content">
+                    <p class="project-card-collapsible-text"><br>Iniciei este projeto com o objetivo de compreender melhor o funcionamento por trás de interfaces de linha de comando como o Bash, enquanto pratico desenvolvimento em Python.
+                    </p>
+                    <h4 class="project-card-collapsible-title">Principais Funcionalidades</h3>
+                    <ul class="project-card-collapsible-list">
+                        <li class="project-card-collapsible-list-item"><b>Execução de comandos & Ciclo de vida:</b> REPL (Read-Eval-Print Loop) completo implementado enquanto gerencia subprocessos para executar comandos externos.</li>
+                        <li class="project-card-collapsible-list-item"><b>Pipelines Avançadas & Redirecionamento:</b> Suporta encadeamento de comandos e redirecionamento de saída.</li>
+                        <li class="project-card-collapsible-list-item"><b>Preenchimento automático dinâmico & Histórico:</b> Suporta preenchimento automático de comandos internos e externos assim como a navegação e gerenciamento do histórico de comandos.</li>
+                        <li class="project-card-collapsible-list-item"><b>Comandos Internos:</b> Implementação customizada de comandos essenciais so shell.</li>
+                        <li class="project-card-collapsible-list-item"><b>Parsing Robusto:</b> Garante a interpretação correta de aspas, barras invertidas e argumentos complexos.</li>
+                    </ul>
+                    <p class="project-card-collapsible-text">Sinta-se à vontade para explorar o repositório do <b>Sheo</b> no <b>GitHub</b> para mais detalhes!</p>
+                </article>
+
+                <article id="project2-card" class="project-card" onclick="openURL(`https://github.com/fga-eps-mds/2025.1-SideChef-RecipeService`)">
+                    <div class="project-info">
+                        <h3 class="project-title">SideChef</h3>
+                        <p class="project-description">SideChef é um projeto desenvolvido na disciplina de Métodos de Desenvolvimento de Software. Consiste em um aplicativo mobile de receitas focado em seu diferencial, a leitura de ingredientes por OCR (Optical Character Recognition).</p>
+                        <br>
                         <p class="project-read-more">Ler mais</p>
                     </div>
                     <div class="project-image"></div>
                 </article>
                 <article class="project-card-collapsible-content">
-                    <p class="project-card-collapsible-description"><br>O objetivo é um aplicativo que possa ajudar o usuário a cozinhar diversas receitas baseadas nos ingredientes que ele possui à disposição em casa.
+                    <p class="project-card-collapsible-text"><br>O objetivo é um aplicativo que possa ajudar o usuário a cozinhar diversas receitas baseadas nos ingredientes que ele possui à disposição em casa.
                         <br><br>O usuário pode tirar uma foto dos ingredientes que possui em casa, que serão identificados pelo OCR e utilizados para filtrar receitas que podem ser feitas com aqueles ingredientes.
                         <br><br>O desenvolvimento do aplicativo ocorreu durante o semestre por uma equipe de 13 estudantes.
                     </p>
-                    <h3 class="project-card-collapsible-contribution">Minha Contribuição</h3>
-                    <ul class="project-card-collapsible-contribution-list">
-                        <li class="project-card-collapsible-contribution-list-item">Fui exclusivamente responsável pela implementação do OCR e pela integração do mesmo com ambos backend e frontend.</li>
+                    <h4 class="project-card-collapsible-title">Minha Contribuição</h3>
+                    <ul class="project-card-collapsible-list">
+                        <li class="project-card-collapsible-list-item">Fui exclusivamente responsável pela implementação do OCR e pela integração do mesmo com ambos backend e frontend.</li>
                     </ul>
                 </article>
-
+                
             </section>
 
 
@@ -149,6 +179,8 @@
                 <h2>Experiências</h2>
 
                 <ol class="timeline">
+                    <div class="timeline-line"></div>
+
                     <li class="timeline-item"><a href="https://grupontsec.com.br/pt/" target="_blank" rel="noopener noreferrer">
                         <div class="timeline-dot"></div>
                         <time class="timeline-date">set 2025 - hoje</time>
@@ -165,7 +197,7 @@
                             <h3 class="timeline-title">Participação no projeto Folha Única</h3>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                         </div>
-                        <p class="timeline-description">A <b>Folha Única</b> é uma Fanzine ofcial que atua como um portal de notícias, artigos, dissertações e histórias. Essa iniciativa escolar é totalmente gerida por alunos do Colégio Único Educacional, em Brasília, DF. Tive a oportunidade de me juntar à <b>equipe de T.I.</b> do jornal e rapidamente me tornar <b>Diretor</b> da mesma, onde fui responsável pela manutenção do website e por ministrar aulas de programação e atividades para a equipe de T.I.,
+                        <p class="timeline-description">A <b>Folha Única</b> é uma Fanzine oficial que atua como um portal de notícias, artigos, dissertações e histórias. Essa iniciativa escolar é totalmente gerida por alunos do Colégio Único Educacional, em Brasília, DF. Tive a oportunidade de me juntar à <b>equipe de T.I.</b> do jornal e rapidamente me tornar <b>Diretor</b> da mesma, onde fui responsável pela manutenção do website e por ministrar aulas de programação e atividades para a equipe de T.I.,
                                                          além da gestão de produtividade da equipe e avaliação de desempenho individual dos membros.</p>
                     </a></li>
 
@@ -225,122 +257,15 @@
                     </a>
                 </div>
                 <div class="copyright">
-                    <p>Copyright &copy; 2025 | Leonardo Alves Bezerra</p>
                     <p>leonardoalvesbezerra@gmail.com</p>
                     <p>+55 (61) 982650328</p>
+                    <br>
+                    <p id="copyright-disclaimer">Copyright &copy; 2025 | Leonardo Alves Bezerra</p>
                 </div>
             </div>
         </footer>
 
     </div>    
-
-    <script>
-
-    // ----- PROJECT CARDS SCRIPTS -----
-    const project_cards = document.querySelectorAll('.project-card');
-
-    project_cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.classList.remove('not-selected');
-            project_cards.forEach(otherCards => {
-                if (otherCards !== card) {
-                    otherCards.classList.add('not-selected');
-                }
-            });
-        });
-    });
-
-    project_cards.forEach(card => {
-        card.addEventListener('mouseleave', () => {
-            const activeCard = Array.from(project_cards).find(c => c.classList.contains('is-active'))
-
-            if (activeCard) {
-                activeCard.classList.remove('not-selected');
-                project_cards.forEach(c => {
-                    if (c !== activeCard) {
-                        c.classList.add('not-selected')
-                    }
-                });               
-            } else {
-                project_cards.forEach(c => {
-                    c.classList.remove('not-selected');
-                });
-            }
-        });
-    });
-
-
-    // ----- PROJECT CARD COLLAPSIBLE SCRIPTS ----
-    project_cards.forEach(card => {
-        card.addEventListener('click', function () {
-            
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                card.classList.remove('is-active');
-                       
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                card.classList.add('is-active');
-                card.classList.remove('not-selected');
-                project_cards.forEach(othercards => {
-                    if (othercards !== card) {
-                        let otherContent = othercards.nextElementSibling;
-                        otherContent.style.maxHeight = null;
-                        
-                        
-                        othercards.classList.remove('is-active');
-                        othercards.classList.add('not-selected');
-                    }
-                })
-            }
-        });
-    });
-
-
-    // ----- TIMELINE SCRIPTS -----
-    const timeline_item = document.querySelectorAll('.timeline-item');
-
-    timeline_item.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            timeline_item.forEach(otheritems => {
-                if (otheritems !== item) {
-                    otheritems.classList.add('not-selected');
-                }
-            });
-        });
-    });
-
-    timeline_item.forEach(item => {
-        item.addEventListener('mouseleave', () => {
-            timeline_item.forEach(otheritem => {
-                if (otheritem !== item) {
-                    otheritem.classList.remove('not-selected');
-                }
-            });
-        });
-    });
-
-    // ----- COPY ICON -----
-
-    async function copyAnimation(icon) {
-        icon.classList.add('copied');
-
-        let text_to_copy = icon.previousElementSibling.textContent;
-
-        try {
-            await navigator.clipboard.writeText(text_to_copy);
-        } catch (err) {
-            console.error("Failed to copy text to clipboard: ", error);
-            alert("Falha ao copiar texto.");
-        }
-
-        setTimeout(() => {
-            icon.classList.remove('copied');
-        }, 2000);
-    }
-
-    </script>
 </body>
 </html>
 
